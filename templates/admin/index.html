@@ -1,0 +1,12 @@
+{% extends 'admin/layout.html'%}
+{% block content %}
+<div class="content align-items-center">
+    <p class="text-center alert alert-warning"> Se você é o administrador deste e-commerce, faça o <a href="{{url_for('admin_login')}}" class="text-decoration-none link-secondary">login aqui.</a><br>
+    Caso contrário retorne para a página <a href="{{url_for('home')}}" class="text-decoration-none link-secondary">inicial</a></p>
+    <h4 class="h4 display-4 text-center mt-5 mb-5"> Olá, Seja bem vindo.</h4> 
+    <div class="d-flex justify-content-center mt-5 mb-5">
+        <img src="{{url_for('static', filename='/img/Logotipo-secundário-fundo-rosa-escuro.png')}}" alt="login" class="rounded-circle" width="450">
+    </div>
+    
+</div>
+{% endblock %}

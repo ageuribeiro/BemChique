@@ -1,0 +1,11 @@
+{% extends 'admin/layout.html'%}
+{% block content %}
+<div class="content align-items-center"> 
+    <h4 class="h4 display-6 text-center mt-5 mb-2"> Área Restrita</h4>
+    <div class="d-flex justify-content-center mt-5 mb-2">
+        <img src="{{url_for('static', filename='/img/Logotipo-secundário-fundo-rosa-escuro.png')}}" alt="login" class="rounded-circle" width="250">
+    </div>
+    <h4 class="h4 display-6 text-center mt-5 mb-2"> Faça o login</h4>
+    <form action="{{url_for('admin_login')}}"></form>
+</div>
+{% endblock %}

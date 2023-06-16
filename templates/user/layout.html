@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap-5.0.2-dist/css/bootstrap.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static', filename='/img/Simbolo-sem-fundo-mockup.png')}}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    {% if title %}
+    <title>{{title}} | E-Commerce</title>
+    {% else %}
+    <title> Bem Chique - Ecommerce </title>
+    {% endif %}
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="{{url_for('static', filename='/img/Logotipo-secundário-fundo-rosa-escuro.png')}}" alt="logotipo" width="35px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+                </li>
+            </ul>
+            <ul class="d-flex col-md-4" role="search">
+                <a href="#" class="mx-1">Quero Me Cadastrar</a>
+                <a href="#" class="mx-1">Entrar</a>
+            </ul>
+            </div>
+        </div>
+    </nav>
+    {% block content %}
+    {% endblock %}
+    <footer class="footer fixed-bottom text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <p><i class="bi bi-instagram"></i><a href="https://www.instagram.com/bemchiques/">@bemchiques</a></p>
+                </div>
+                <div class="col-4">
+                    <p> &copy; 2023 <a href="{{url_for('home')}}">Bem Chique</a>. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-4">
+                    <p><a href="{{url_for('admin')}}">Management</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="{{url_for('static', filename='bootstrap-5.0.2-dist/js/bootstrap.min.js')}}"></script>
+</body>
+</html>
